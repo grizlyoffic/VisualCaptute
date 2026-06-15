@@ -84,3 +84,4 @@ public class FileCreatorService {
     Thread.sleep(500);
     Log.d("FileCreator", "Executed: " + command);
 }
+}
