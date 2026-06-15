@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#1a1a2e"
+    android:gravity="center">
+    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="30dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HTTP Capture"
+        android:textSize="28sp"
+        android:textColor="#e94560"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shizuku-based Request Capture Tool"
+        android:textSize="14sp"
+        android:textColor="#aaa"
+        android:layout_marginBottom="40dp"/>
+    
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checking Shizuku status..."
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+    
+    <Button
+        android:id="@+id/btnCheckShizuku"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Check Shizuku Status"
+        android:backgroundTint="#16213e"
+        android:textColor="#fff"
+        android:layout_marginBottom="15dp"/>
+    
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Continue to Capture"
+        android:backgroundTint="#e94560"
+        android:textColor="#fff"
+        android:enabled="false"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Requires Shizuku to be running"
+        android:textSize="12sp"
+        android:textColor="#ff6b6b"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+    
+</LinearLayout>

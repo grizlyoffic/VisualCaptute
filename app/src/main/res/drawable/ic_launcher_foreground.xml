@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#1a1a2e"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- Outer Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,54m-38,0a38,38 0,1 1,76 0a38,38 0,1 1,-76 0"
+        android:strokeColor="#e94560"
+        android:strokeWidth="3"/>
+    
+    <!-- Wi-Fi/Network Icon -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,35L54,38"
+        android:strokeColor="#00ff88"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"/>
+    
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M48,42Q54,35 60,42"
+        android:strokeColor="#00ff88"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"/>
+    
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M42,49Q54,37 66,49"
+        android:strokeColor="#00ff88"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"/>
+    
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M36,56Q54,40 72,56"
+        android:strokeColor="#00ff88"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"/>
+    
+    <!-- Center Capture Circle -->
+    <path
+        android:fillColor="#e94560"
+        android:pathData="M54,60m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+    
+    <!-- Recording Dot -->
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M54,60m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+    <!-- Data Arrows -->
+    <path
+        android:fillColor="#00ff88"
+        android:pathData="M54,22L50,28L58,28Z"/>
+    
+    <path
+        android:fillColor="#00ff88"
+        android:pathData="M54,86L50,80L58,80Z"/>
+    
+</vector>
