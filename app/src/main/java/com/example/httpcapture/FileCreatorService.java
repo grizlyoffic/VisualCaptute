@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+
 public class FileCreatorService {
     
     private Context context;
@@ -70,15 +71,16 @@ public class FileCreatorService {
     }
     
     private void execShizukuCommand(String command) throws Exception {
-        // Execute command using Shizuku
-        Shizuku.newProcess(new String[]{"sh", "-c", command}, null, null);
-        
-        // Wait a bit for command to execute
-        Thread.sleep(500);
-        
-        // Verify with another command
-        String verifyCmd = "ls -la '" + command.substring(command.lastIndexOf("'") + 1, 
-                          command.lastIndexOf("'") != -1 ? command.lastIndexOf("'") - 1 : 0) + "'";
-        Log.d("FileCreator", "Executing: " + command);
+    // 1. Check karein ki Shizuku permission hai ya nahi
+    if (Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED) {
+        // 2. Sahi method: Shizuku.exec
+        Process process = Shizuku.exec(new String[]{"sh", "-c", command}, null, null);
+        process.waitFor();
+    } else {
+        Log.e("FileCreator", "Shizuku permission denied");
     }
+
+    // Baaki logic...
+    Thread.sleep(500);
+    Log.d("FileCreator", "Executed: " + command);
 }
