@@ -71,17 +71,19 @@ public class FileCreatorService {
     }
     
     private void execShizukuCommand(String command) throws Exception {
-    // 1. Check karein ki Shizuku permission hai ya nahi
-    if (Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED) {
-        // 2. Sahi method: Shizuku.exec
+    // 1. Shizuku permission check (Direct class use karein)
+    if (android.content.pm.PackageManager.PERMISSION_GRANTED == Shizuku.checkSelfPermission()) {
+        
+        // 2. Process execute karein (Shizuku v13.1.5 ka sahi tarika)
+        // Shizuku.exec(String[] cmd, String[] env, String dir)
         Process process = Shizuku.exec(new String[]{"sh", "-c", command}, null, null);
         process.waitFor();
+        
+        Log.d("FileCreator", "Executed: " + command);
     } else {
-        Log.e("FileCreator", "Shizuku permission denied");
+        Log.e("FileCreator", "Shizuku permission NOT GRANTED");
     }
-
-    // Baaki logic...
+    
     Thread.sleep(500);
-    Log.d("FileCreator", "Executed: " + command);
 }
 }
