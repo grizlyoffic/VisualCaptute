@@ -1,14 +1,12 @@
-// Root build.gradle
-
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
     dependencies {
-        // Gradle plugin version ko yahan define karein
         classpath 'com.android.tools.build:gradle:8.2.0'
     }
 }
-
-// "repositories" aur "allprojects" wale blocks yahan se hata diye gaye hain
-// kyunki wo ab 'settings.gradle' mein handle ho rahe hain.
 
 task clean(type: Delete) {
     delete rootProject.buildDir
